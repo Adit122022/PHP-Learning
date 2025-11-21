@@ -9,12 +9,15 @@ if (isset($_GET['delete'])) {
 }
 ?>
 
+
+<!-- local -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Student Management System</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -26,6 +29,7 @@ if (isset($_GET['delete'])) {
         <table>
             <tr>
                 <th>ID</th>
+                
                 <th>Name</th>
                 <th>Email</th>
                 <th>Department</th>
@@ -46,8 +50,8 @@ if (isset($_GET['delete'])) {
                     <td>{$row['marks']}</td>
                     <td>{$row['grade']}</td>
                     <td>
-                        <a href='edit.php?id={$row['id']}' class='btn-edit'>Edit</a>
-                        <a href='index.php?delete={$row['id']}' class='btn-delete' onclick='return confirm(\"Are you sure?\")'>Delete</a>
+                        <a href='edit.php?id={$row['id']}' class='btn-edit'>✏️</a>
+                        <a href='index.php?delete={$row['id']}' class='btn-delete' onclick='return confirm(\"Are you sure?\")'>📦</a>
                     </td>
                 </tr>";
             }
